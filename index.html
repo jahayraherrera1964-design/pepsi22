@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pepsi Store & Brand Experience | Una marca que se reinventa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Iconos Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Barra promocional superior estilo e-commerce -->
+  <div class="top-promo-bar">
+    <span>🚚 Envío GRATIS en packs seleccionados de PepsiCo · Proyecto Académico Interactivo</span>
+  </div>
+
+  <!-- Header estilo Saga / Ripley / Hiraoka -->
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="#inicio" class="brand-logo">
+        <div class="pepsi-globe"></div>
+        <span>PEPSI</span>
+      </a>
+
+      <!-- Buscador interactivo -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar productos, historia, logotipos, campañas..." />
+        <button id="searchBtn" aria-label="Buscar"><i class="ph ph-magnifying-glass"></i></button>
+      </div>
+
+      <!-- Acciones de usuario y carrito -->
+      <div class="header-actions">
+        <button class="action-btn" id="openHistoryModalBtn" title="Ver Línea de Tiempo">
+          <i class="ph ph-clock-counter-clockwise"></i>
+          <span>Historia</span>
+        </button>
+        <button class="action-btn cart-btn" id="openCartBtn">
+          <i class="ph ph-shopping-cart"></i>
+          <span>Mi Carrito</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú de navegación por categorías -->
+    <nav class="category-nav">
+      <div class="container nav-links">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#productos">Portafolio & Tienda</a>
+        <a href="#historia">Línea de Tiempo</a>
+        <a href="#identidad">Evolución Logos</a>
+        <a href="#personalidad">Personalidad & Marketing</a>
+        <a href="#mercado">Mercado vs Coca-Cola</a>
+        <a href="#estrategia">Análisis Estratégico</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO BANNER (Diapositiva 1 & 2) -->
+  <section id="inicio" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge-new">NUEVA IDENTIDAD VISUAL</span>
+        <h1>PEPSI</h1>
+        <h2>Una marca que se reinventa</h2>
+        <p>
+          Bebida internacional tipo cola reconocida por su sabor, identidad azul, roja y blanca, y su conexión constante con la música, el deporte y la cultura popular.
+        </p>
+        <div class="hero-cta">
+          <a href="#productos" class="btn-primary">Explorar Catálogo</a>
+          <a href="#historia" class="btn-outline">Descubrir Historia</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="can-showcase">
+          <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" alt="Lata Pepsi fría" />
+          <div class="floating-tag">
+            <strong>100% Refrescante</strong>
+            <span>Portafolio PepsiCo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO E-COMMERCE DE PRODUCTOS (Diapositiva 5) -->
+  <section id="productos" class="section-block">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag">PORTAFOLIO OFICIAL</span>
+          <h2>Variedades para distintas preferencias</h2>
+        </div>
+
+        <!-- Filtros estilo retail -->
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">Todos (4)</button>
+          <button class="filter-btn" data-filter="clasica">Clásica</button>
+          <button class="filter-btn" data-filter="sin-azucar">Sin Azúcar / Diet</button>
+          <button class="filter-btn" data-filter="sabores">Sabores</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Se renderiza dinámicamente con JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LÍNEA DE TIEMPO INTERACTIVA (Diapositiva 3) -->
+  <section id="historia" class="section-block bg-light">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">HISTORIA DE MARCA</span>
+        <h2>De una farmacia a una marca global</h2>
+        <p>Haz clic en cada hito histórico para explorar la evolución de más de un siglo.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-nodes" id="timelineNodes">
+          <!-- Nodos 1893, 1898, 1965, 2023 -->
+        </div>
+      </div>
+
+      <div class="timeline-detail-card" id="timelineDetail">
+        <!-- Detalle dinámico del año seleccionado -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUCIÓN DE LOGOTIPOS (Diapositiva 4) -->
+  <section id="identidad" class="section-block">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">IDENTIDAD VISUAL</span>
+        <h2>Un símbolo en constante evolución</h2>
+        <p>De izquierda a derecha: desde el trazo clásico hasta el globo moderno de alto contraste.</p>
+      </div>
+
+      <div class="logos-grid">
+        <div class="logo-card">
+          <div class="logo-era-badge">1898</div>
+          <div class="logo-preview era-1898">Pepsi-Cola</div>
+          <h4>Origen</h4>
+          <p>Tipografía caligráfica clásica en rojo inspirada en las fuentes de soda de la época.</p>
+        </div>
+
+        <div class="logo-card">
+          <div class="logo-era-badge">1950s</div>
+          <div class="logo-preview era-1950">
+            <div class="cap-circle">PEPSI</div>
+          </div>
+          <h4>Globo</h4>
+          <p>Introducción de la chapa tricolor (rojo, blanco y azul) que define el ADN visual.</p>
+        </div>
+
+        <div class="logo-card">
+          <div class="logo-era-badge">1990s</div>
+          <div class="logo-preview era-1990">
+            <span class="italic-pepsi">PEPSI</span>
+            <div class="mini-globe"></div>
+          </div>
+          <h4>Más energía</h4>
+          <p>Tipografía inclinada dinámica con fuerte presencia en cultura pop y deportes.</p>
+        </div>
+
+        <div class="logo-card featured-logo">
+          <div class="logo-era-badge">2023 - Actual</div>
+          <div class="logo-preview era-2023">
+            <div class="modern-globe">PEPSI</div>
+          </div>
+          <h4>Identidad Actual</h4>
+          <p>Globo audaz de alto contraste con tipografía centrada en negro y azul eléctrico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONALIDAD Y MARKETING EN PESTAÑAS INTERACTIVAS (Diapositivas 6 y 7) -->
+  <section id="personalidad" class="section-block bg-dark-blue text-white">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag light">ESENCIA Y CONEXIÓN</span>
+        <h2>Personalidad y Pilares de Marketing</h2>
+        <div class="tab-switcher">
+          <button class="tab-btn active" data-tab="tab-personalidad">Personalidad de Marca</button>
+          <button class="tab-btn" data-tab="tab-marketing">Marketing (3 Columnas)</button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Personalidad -->
+      <div class="tab-content active" id="tab-personalidad">
+        <div class="three-cards-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="ph ph-lightning"></i></div>
+            <h3>Dinámica</h3>
+            <p>Energía constante, movimiento y actitud juvenil que impulsa cada experiencia.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="ph ph-sparkle"></i></div>
+            <h3>Contemporánea</h3>
+            <p>Diseño audaz, moderno y adaptado a las tendencias actuales de la cultura visual.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="ph ph-users-three"></i></div>
+            <h3>Cercana</h3>
+            <p>Conectada con la cultura popular y los momentos cotidianos de disfrute social.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Marketing -->
+      <div class="tab-content" id="tab-marketing">
+        <div class="three-cards-grid">
+          <div class="pillar-card marketing-card">
+            <div class="pillar-icon red"><i class="ph ph-music-notes"></i></div>
+            <h3>Música y entretenimiento</h3>
+            <p>Asociaciones con artistas globales, espectáculos de medio tiempo y momentos culturales.</p>
+          </div>
+          <div class="pillar-card marketing-card">
+            <div class="pillar-icon red"><i class="ph ph-trophy"></i></div>
+            <h3>Deporte</h3>
+            <p>Patrocinios y campañas que aprovechan la emoción de los grandes eventos deportivos.</p>
+          </div>
+          <div class="pillar-card marketing-card">
+            <div class="pillar-icon red"><i class="ph ph-megaphone"></i></div>
+            <h3>Publicidad</h3>
+            <p>Mensajes visuales de alto impacto y campañas disruptivas que generan conversación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCADO Y COMPETENCIA (Diapositiva 8) -->
+  <section id="mercado" class="section-block">
+    <div class="container">
+      <div class="versus-banner">
+        <div class="brand-side pepsi-side">
+          <div class="versus-circle blue">PEPSI</div>
+          <span>Retador Dinámico</span>
+        </div>
+
+        <div class="versus-center">
+          <span class="section-tag">ANÁLISIS DE MERCADO</span>
+          <h2>Competencia en la categoría cola</h2>
+          <p>Enfrentamiento global liderado por identidad, portafolio y alcance.</p>
+        </div>
+
+        <div class="brand-side coke-side">
+          <div class="versus-circle red">COCA-COLA</div>
+          <span>Competidor Principal</span>
+        </div>
+      </div>
+
+      <div class="four-factors-grid">
+        <div class="factor-box">
+          <i class="ph ph-target"></i>
+          <h4>Posicionamiento</h4>
+          <p>Identidad juvenil, atrevida y ligada al entretenimiento.</p>
+        </div>
+        <div class="factor-box">
+          <i class="ph ph-flask"></i>
+          <h4>Innovación</h4>
+          <p>Expansión de opciones sin azúcar y nuevos perfiles de sabor.</p>
+        </div>
+        <div class="factor-box">
+          <i class="ph ph-broadcast"></i>
+          <h4>Publicidad</h4>
+          <p>Campañas de alto impacto y alianzas con celebridades.</p>
+        </div>
+        <div class="factor-box">
+          <i class="ph ph-truck"></i>
+          <h4>Distribución</h4>
+          <p>Presencia masiva respaldada por la red global de PepsiCo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANÁLISIS ESTRATÉGICO EN 4 CUADROS (Diapositiva 9) -->
+  <section id="estrategia" class="section-block bg-light">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">LECTURA ESTRATÉGICA</span>
+        <h2>Matriz Estratégica de Pepsi</h2>
+      </div>
+
+      <div class="strategy-grid">
+        <div class="strategy-card fortaleza">
+          <div class="strategy-header">
+            <i class="ph ph-shield-check"></i>
+            <h3>Fortalezas</h3>
+          </div>
+          <p>Reconocimiento global inmediato y más de un siglo de trayectoria en el mercado.</p>
+        </div>
+
+        <div class="strategy-card oportunidad">
+          <div class="strategy-header">
+            <i class="ph ph-trend-up"></i>
+            <h3>Oportunidades</h3>
+          </div>
+          <p>Innovación constante en bebidas sin azúcar y adaptación a nuevas preferencias.</p>
+        </div>
+
+        <div class="strategy-card desafio">
+          <div class="strategy-header">
+            <i class="ph ph-sword"></i>
+            <h3>Desafíos</h3>
+          </div>
+          <p>Competencia intensa en la categoría cola y cambios rápidos en hábitos de consumo.</p>
+        </div>
+
+        <div class="strategy-card riesgo">
+          <div class="strategy-header">
+            <i class="ph ph-warning-circle"></i>
+            <h3>Riesgos</h3>
+          </div>
+          <p>Presión regulatoria, impuestos y debate público sobre bebidas azucaradas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE / FOOTER (Diapositiva 10) -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-quote">
+        <h2>“Las grandes marcas no dejan de evolucionar.”</h2>
+        <p>Gracias por su atención · Presentación interactiva de marca y portafolio Pepsi.</p>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Proyecto Académico Independiente</strong></p>
+        <p>Pepsi y PepsiCo son marcas registradas de sus respectivos titulares.</p>
+        <p class="ref-note">Fuentes: PepsiCo Historia (2026) · pepsi.com/products</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DRAWER LATERAL DE CARRITO DE COMPRAS (Estilo Saga / Ripley) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="ph ph-shopping-bag"></i> Tu Carrito Pepsi</h3>
+      <button id="closeCartBtn" class="close-btn"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- Items dinámicos -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total estimado:</span>
+        <strong id="cartTotal">S/ 0.00</strong>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">Simular Compra</button>
+    </div>
+  </aside>
+
+  <!-- MODAL DE VISTA RÁPIDA DE PRODUCTO -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModalBtn"><i class="ph ph-x"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
